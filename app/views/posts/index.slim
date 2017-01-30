@@ -1,0 +1,21 @@
+
+doctype html
+html
+  head
+    title posts-index
+    meta name="keywords" content="template language"
+    meta name="author" content="author"
+
+  body
+    h1 Posts-Index
+
+    #content
+      p This example shows you how a basic Slim file looks.
+
+    - if @posts.any?
+      #items
+        - for post in @posts
+          #title
+            h2 =post.title
+          #content
+            =post.content

@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title main-index
+    meta name="keywords" content="template language"
+    meta name="author" content="author"
+
+  body
+    h1 Main-Index
+
+    #content
+      p This example shows you how a basic Slim file looks.
+
+    = @test
+
+    - if @arr.any?
+      table#items
+        - for item in @arr
+          tr
+            td.name = item
